@@ -43,9 +43,17 @@ export function AppShell() {
         </div>
       </main>
       <footer className="border-t bg-card">
-        <div className="mx-auto max-w-5xl px-4 py-3 text-xs text-muted-foreground">
-          Jig v{__APP_VERSION__} · client-side tools, runs entirely in your
-          browser
+        <div className="mx-auto max-w-5xl px-4 py-3 text-xs text-muted-foreground flex flex-wrap items-center justify-between gap-2">
+          <span>Jig v{__APP_VERSION__}</span>
+          <span>
+            &copy; {new Date().getFullYear()}{" "}
+            <a
+              href="https://danielmiller.ca"
+              className="underline-offset-2 hover:underline hover:text-foreground"
+            >
+              Daniel Miller
+            </a>
+          </span>
         </div>
       </footer>
     </div>

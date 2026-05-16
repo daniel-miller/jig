@@ -1,5 +1,3 @@
-import { useEffect, useMemo, useState } from "react";
-import { Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,6 +17,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { md5 } from "@/lib/md5";
+import { Copy } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 
 const DEFAULT_IMAGES = [
   { value: "identicon", label: "Identicon — geometric pattern" },
@@ -86,6 +86,16 @@ export function GravatarPage() {
         <h1 className="text-2xl font-semibold tracking-tight">Gravatar URL</h1>
         <p className="text-muted-foreground mt-1">
           MD5 of the normalized email, then the standard query parameters.
+          Check out{" "}
+          <a
+            href="https://jdenticon.com"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium text-primary underline-offset-4 hover:underline"
+          >
+            Jdenticon
+          </a>{" "}
+          for an alternative.
         </p>
       </div>
 
